@@ -1,0 +1,106 @@
+.topics {
+  display: flex;
+  justify-content: center;
+}
+
+.topics > li {
+  background: transparent;
+  padding: 8px 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border-color: rgba(0, 0, 0, 0.08);
+  border-style: solid;
+  border-width: 1px 0 1px 0;
+  transition: all .3s ease-in-out;
+}
+
+.topics > li:first-child {
+  border-left-width: 1px;
+}
+
+.topics > li:last-child {
+  border-right-width: 1px;
+}
+
+.topics > li:hover {
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.topics > li.active,
+.topics > li.active:hover {
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px 0px rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.posts {
+  max-width: 900px;
+  margin: 40px auto;
+  border: 1px solid #e6e7e8;
+}
+
+.posts > li {
+  display: block;
+  position: relative;
+  background: #ffffff;
+  color: #232426;
+  font-size: 15px;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  outline: none;
+}
+
+.posts > li:nth-child(even) {
+  background: #f1f2f3;
+}
+
+.posts > li + li {
+  margin-top: 0px;
+  border-top: 1px solid #e6e7e8;
+}
+
+.posts > li > button {
+  position: absolute;
+  right: 10px;
+  top: 4px;
+  color: #ff8e98;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  text-align: center;
+  padding: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  outline: none;
+}
+.posts > li > button:hover:enabled {
+  color: #d50015;
+  transform: translateY(1px);
+}
+
+.posts > li.visited {
+  color: #a1a2a3;
+}
+
+.posts > li.favorite > button {
+  color: #d50015;
+}
+.posts > li.favorite > button:hover:enabled {
+  color: #9b000c;
+}
+
+.posts > li:hover,
+.posts > li.visited:hover {
+  color: #b7000f;
+}
+
+.posts > li > a {
+  display: inline-block;
+  color: inherit;
+  font-size: inherit;
+  padding: 12px 8px;
+  margin-right: 30px;
+  line-height: 20px;
+}
